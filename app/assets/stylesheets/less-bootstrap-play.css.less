@@ -1,0 +1,267 @@
+@import 'twitter/bootstrap';
+body {
+	font-family: Helvetica, Verdana, Geneva, Arial, sans-serif;
+  padding-top: 60px;
+  background-image: url('images/control_back.gif');
+}
+
+// Custom colors:
+@comnspace: #09f;
+@titleColor: @comnspace;
+@linkColor: @comnspace;
+@tagNav: #777;
+
+.navbar {
+  .nav {
+    margin: 0 10px 0 10px;
+  }
+  // Website name
+  .brand {
+    color: @titleColor;
+  	font-weight: bold;	
+  	font-size: 20px;
+  }
+  .opacity(95);
+}
+
+.navbar-inner {
+	background-image: url('images/top_back.gif');
+}
+
+.nav > li > a > i {
+  margin-right: 2px;
+}
+
+.nav > li > a:hover {
+  background-color: #f6f6f6;
+  color: @linkColor;
+}
+
+.nav-list .active > a {
+  background-color: #eee;
+  color: @comnspace;
+  text-shadow: none;
+}
+
+.nav-list .nav-tags > a,
+.nav-list .nav-tags > a:hover {
+  color: @tagNav;
+}
+
+.well {
+  padding: 8px;
+	background-color: #fff;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+.scratch-pad {
+  width: 100%;
+  min-height: 1000px;
+  background-color: #fff;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.content {
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.entry-item > h3 > a {
+  color: @black;
+}
+
+.entry-item > hr {
+  margin: 15px 0 8px 0;
+}
+
+.entry-details > a {
+	font-weight: bold;	
+}
+
+.entry-tags {
+  padding: 5px;
+}
+
+#add-tag {
+  cursor: pointer;
+}
+
+.entry-summary {
+  padding-top: 8px;
+}
+
+.entry-summary > a {
+	color: @black;
+	text-decoration: underline;
+}
+
+.entry-summary > p > a {
+	color: @black;
+	text-decoration: underline;
+}
+
+.entry-action {
+  padding: 0 10px 0 10px;
+}
+
+.entry-action > i {
+  margin-right: 2px;
+}
+
+[class^="favicon-"] {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  vertical-align: text-top;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+
+  .ie7-restore-right-whitespace();
+}
+
+.icon-gray {
+  background-image: asset-url("twitter/bootstrap/glyphicons-halflings-white.png");
+  opacity:0.5;
+}
+
+.favicon-railscasts {
+  background-image: asset-url("http://www.google.com/s2/u/0/favicons?domain=www.railscasts.com");
+}
+.favicon-highscalability {
+  background-image: asset-url("http://www.google.com/s2/u/0/favicons?domain=highscalability.com");  
+}
+.favicon-techcrunch {
+  background-image: asset-url("http://www.google.com/s2/u/0/favicons?domain=techcrunch.com");  
+}
+.favicon-engadget {
+  background-image: asset-url("http://www.google.com/s2/u/0/favicons?domain=engadget.com");  
+}
+
+.fill {
+  min-height: 8px;
+}
+
+.span1 .comment-profile {
+  padding: 8px 0;
+  .thumbnail {
+    background-color: #eee;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.comment-form {
+  position: relative;
+  padding: 4px;
+  margin: 8px;
+  border: 1px solid #ddd;
+  background-color: #eee;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+.comment-action {
+  float: right;
+  padding: 2px 0 0 0;
+}
+
+.comment-submit {
+  text-align:right;
+  padding: 4px 0 0 0;
+}
+
+.btn > i {
+  margin-right: 2px;
+}
+
+.comment-form:before  
+{  
+    content: ' ';  
+    position: absolute;  
+    width: 0;  
+    height: 0;  
+    left: -11px;  
+    top: 20px;  
+    border: 5px solid;
+    border-color: transparent #ddd transparent transparent;  
+}
+
+.comment-form:after  
+{  
+  content: ' ';  
+  position: absolute;  
+  width: 0;  
+  height: 0;  
+  left: -10px;  
+  top: 20px;  
+  border: 5px solid;
+  border-color: transparent #eee transparent transparent;  
+}
+
+.comment-title {
+  padding: 4px 4px 8px;
+}
+
+.comment-title > i {
+  margin-right: 2px;
+}
+
+.comment-body {
+  padding: 4px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.comment-body > textarea {
+  width: 100%;
+  height: 80px;
+  margin-bottom: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.horizontal-form-heading {
+  line-height: 36px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 160px;
+  text-rendering: optimizelegibility;
+}
+
+.controls > textarea {
+  width: 100%;
+  height: 80px;
+}
+
+.controls {
+  padding-right: 16px;
+  .input-xlarge {
+    width: 100%;
+  }
+}
+
+.form-horizontal {
+  margin: 0;
+}
+
+.form-actions {
+  background: @white;
+  margin-bottom: 0;
+}
+
+.row-fluid .float-right {
+  float: right;
+}
+
+.span11 .comment-participants {
+  padding: 8px;
+  .thumbnail {
+    background-color: #eee;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
