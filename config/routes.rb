@@ -1,4 +1,6 @@
 LessBootstrapPlay::Application.routes.draw do
+  get "feeds/index"
+
   resources :origamis
 
   get "welcome/index"
