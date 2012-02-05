@@ -3,6 +3,7 @@
 <head>
   <title>LessBootstrapPlay</title>
   <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "https://www.google.com/jsapi" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
@@ -31,12 +32,12 @@
       <div class="span3">
         <div class="well sidebar-nav">
         	<ul class="nav nav-list">
-						<li class="nav-header">Groups</li>
+						<li class="nav-header">Groups<i class="icon-plus icon-gray-black pull-right"></i></li>
 						<li class="active"><a href="#">comnspace ideas</a></li>
 						<li ><a href="#">web development</a></li>
 						<li><a href="#">berkeley waterski</a></li>
 						<li><a href="#">wakeboarders</a></li>
-						<li class="nav-header">Blogs</li>
+						<li class="nav-header">Blogs<i class="icon-plus icon-gray-black pull-right"></i></li>
 						<li><a href="#"><i class="favicon-engadget"></i>Engadget</a></li>
 						<li><a href="#"><i class="favicon-techcrunch"></i>Techcrunch</a></li>
 						<li><a href="#"><i class="favicon-highscalability"></i>High Scalability</a></li>

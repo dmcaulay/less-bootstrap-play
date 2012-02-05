@@ -9,7 +9,65 @@
 //= require_tree .
 //= require twitter/bootstrap
 
-$(document).ready(function(){
-  $('#add-tag').tooltip()
+google.load("feeds", "1");
+
+function findDone(result) {
+  // Make sure we didn't get an error.
+  if (!result.error) {
+    // Get content div
+    var html = '';
+    var urls = [];
+
+    // Loop through the results and print out the title of the feed and link to
+    // the url.
+    for (var i = 0; i < result.entries.length; i++) {
+      var entry = result.entries[i];
+
+      if (urls.indexOf(entry.url) != -1)
+      {
+        continue;
+      }
+      urls.push(entry.url);
+
+      html += " \
+        <div class='well content'> \
+          <div class='entry-item'> \
+    			  <h3> \
+    		"
+    	html += "<a href='" + entry.link + "'>" + entry.title + "</a>";
+    	html += " \
+              <span style='float:right'> \
+                <a class='btn btn-primary btn-small' href='#'><i class='icon-plus icon-white'></i></a> \
+              </span> \
+    	      </h3> \
+    	      <div> \
+    	  ";
+      	html += "<a href='" + entry.link + "'>" + entry.link + "</a>";
+    	html += " \
+    	      </div> \
+    	      <div class='entry-summary'> \
+    	  ";
+    	html += entry.contentSnippet;
+    	html += " \
+    	      </div> \
+    	    </div> \
+    	  </div> \
+    	  ";
+    }
+    $('#search-results').html(html);
+  }
+}
+
+$(function() {
+  $('#feed-search').submit(function() {
+    var query = $('#search-val').val();
+    google.feeds.findFeeds(query, findDone);
+    return false;
+  });
+  $("#search-val").keyup(function() {
+    var query = $('#search-val').val();
+    google.feeds.findFeeds(query, findDone);
+    return false;
+  });
 });
 
