@@ -1,4 +1,6 @@
 LessBootstrapPlay::Application.routes.draw do
+  resources :groups, :only => [:index]
+
   resources :feeds, :only => [:index]
 
   resources :origamis
