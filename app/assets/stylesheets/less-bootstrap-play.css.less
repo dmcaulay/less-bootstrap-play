@@ -11,6 +11,8 @@ body {
 @linkColor: @comnspace;
 @tagNav: #777;
 
+@zindexFixedAlert: @zindexFixedNavbar - 5;
+
 .navbar {
   .nav {
     margin: 0 10px 0 10px;
@@ -264,6 +266,10 @@ body {
   float: right;
 }
 
+.entry-item > h3 > a > i {
+  margin-right: 2px;
+}
+
 .entry-pagination {
   width: 100%;
   box-sizing: border-box;
@@ -278,4 +284,17 @@ body {
     display: inline-block;
     vertical-align: middle;
   }
+}
+
+.fixed-alert {
+  z-index: @zindexFixedAlert;
+  position: fixed;
+  left: 50%;
+  margin-left: -280px;
+  width: 560px;
+  &.slide {
+    .transition(top 1s ease);
+    top: 0 - @navbarHeight;
+  }
+  &.slide.in { top: @navbarHeight; }
 }

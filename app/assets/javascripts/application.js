@@ -34,7 +34,7 @@ function findDone(result) {
           <div class='entry-item'> \
     			  <h3> \
     		"
-    	html += "<a href='" + entry.link + "'>" + entry.title + "</a>";
+    	html += "<a href='" + entry.link + "'><i class='favicon-engadget' style='background-image: url(\"http://www.google.com/s2/u/0/favicons?domain=" + entry.link.substring(7, entry.link.length-1) + "\")'></i>" + entry.title + "</a>";
     	html += " \
               <span style='float:right'> \
                 <a class='btn btn-primary btn-small' href='#'><i class='icon-plus icon-white'></i></a> \
@@ -68,6 +68,15 @@ $(function() {
     var query = $('#search-val').val();
     google.feeds.findFeeds(query, findDone);
     return false;
+  });
+  $('#alert-test').alert();
+  $('#alert-test-close').click(function() {
+    $('#alert-test').removeClass('in');
+  });
+  $('.span9').click(function() {
+    var element = $('#alert-test');
+    element.addClass('in');
+    setTimeout(function() { element.removeClass('in') }, 10000);
   });
 });
 
