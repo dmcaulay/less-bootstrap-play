@@ -298,3 +298,25 @@ body {
   }
   &.slide.in { top: @navbarHeight; }
 }
+
+.controls .group-users {
+  .thumbnail {
+    .clearfix();
+    display: inline-block;
+    margin: 0;
+    color: @black;
+    font-weight: 600;
+    cursor: default;
+    position: relative;
+    &:hover {
+      text-decoration: none;
+    }
+    i {
+      .opacity(25);
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      cursor: pointer;
+    }
+  }
+}
