@@ -1,5 +1,9 @@
 <% 10.times do |i| %>
-	<div class="well content">
+  <% unless i.even? %>
+	  <div class="well content entry-active">
+	<% else %>
+    <div class="well content">
+	<% end %>
 		<div class="entry-item">
 			<h3>
 				<a href="http://www.engadget.com/2012/01/21/netflix-cmo-management-change/">Netflix is looking for a new Chief Marketing Officer, if you think you can do better</a><a class="close" href="#">×</a>
@@ -17,6 +21,9 @@
 			<hr>
 			<span class="entry-action">
 				<i class="icon-star-empty"></i>Star
+			</span>
+			<span class="entry-action">
+			  <i class="icon-bookmark"></i>Read Later
 			</span>
 			<span class="entry-action">
 				<i class="icon-comment"></i>19 Comments
