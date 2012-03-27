@@ -3,7 +3,10 @@ LessBootstrapPlay::Application.routes.draw do
 
   resources :feeds, :only => [:index]
 
-  resources :origamis
+  resources :evolution, :only => [:index]
+  resources :preview, :only => [:index]
+  resources :cucumber, :only => [:index]
+  resources :heroku, :only => [:index]
 
   get "welcome/index"
 

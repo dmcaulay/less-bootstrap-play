@@ -69,6 +69,7 @@ $(function() {
     google.feeds.findFeeds(query, findDone);
     return false;
   });
+  $('.carousel').carousel()
   $('#alert-test').alert();
   $('#alert-test-close').click(function() {
     $('#alert-test').removeClass('in');
